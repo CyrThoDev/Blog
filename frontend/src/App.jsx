@@ -1,14 +1,16 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Articles from "./pages/Articles";
+import OneArticle from "./pages/OneArticle";
 
 import "./App.css";
 
 function App() {
   return (
     <BrowserRouter>
-    <div className="App">
-      <p>coucou</p>
-    </div>
-
+      <Routes>
+        <Route path="/" element={<Articles />} />
+        <Route path="/articles/:id" element={<OneArticle />} />
+      </Routes>
     </BrowserRouter>
   );
 }
